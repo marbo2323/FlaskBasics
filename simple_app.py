@@ -9,7 +9,7 @@ def index(name="Treehouse"):
 
 @app.route('/add/<num1>/<num2>')
 def add(num1, num2):
-    return '{0} + {1} = {2}'.format(num1, num2, num1 + num2)
+    return '{0} + {1} = {2}'.format(num1, num2, int(num1) + int(num2))
 
 
 app.run(debug=True, port=8000, host='0.0.0.0')
