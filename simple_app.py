@@ -8,6 +8,9 @@ def index(name="Treehouse"):
     return "Hello from {}".format(name)
 
 @app.route('/add/<int:num1>/<int:num2>')
+@app.route('/add/<float:num1>/<int:num2>')
+@app.route('/add/<int:num1>/<float:num2>')
+@app.route('/add/<float:num1>/<float:num2>')
 def add(num1, num2):
     return '{0} + {1} = {2}'.format(num1, num2, num1 + num2)
 
