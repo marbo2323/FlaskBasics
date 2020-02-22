@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
-{% block title %}Home{% endblock %}
+{% block title %}Home :: {{ super() }}{% endblock %}
 
 {% block content %}
-<h1>{{ name }}</h1>
+<h1>Hello from {{ name }}!</h1>
 {% endblock %}
